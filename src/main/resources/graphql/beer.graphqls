@@ -1,0 +1,14 @@
+type Beer {
+    id: ID!
+    name: String!
+    description: String!
+    category: String!
+    ibu: Float!
+    alc: Float!
+    price: Float!
+    image: String!
+}
+
+extend type Query {
+    beers: [Beer]!
+}

@@ -1,0 +1,29 @@
+spring:
+  config:
+    import: file:C:\Users\Franco\IdeaProjects\brettagraphql2\src\main\resources\application-dev.yml
+  datasource:
+    url: ${DATABASE_URL}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+
+  graphql:
+    schema:
+      printer:
+        enabled: true
+    graphiql:
+      enabled: true
+  profiles:
+    active: application-dev.yml
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG

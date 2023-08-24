@@ -1,0 +1,24 @@
+type UserEntity {
+    id: ID!
+    username: String!
+    password: String!
+}
+
+input UserInput {
+    username: String!
+    password: String!
+}
+
+type AuthEntity {
+    accessToken: String!
+    tokenType: String!
+}
+
+extend type Query {
+    users: [UserEntity!]
+}
+
+extend type Mutation {
+    register(input: UserInput!): String!
+    login(input: UserInput!): AuthEntity!
+}
