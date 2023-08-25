@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 
 @Controller
 public class SecurityConstants {
-    public static final long JWT_EXPIRATION = 2592000;
+    public static final long JWT_EXPIRATION = 70000;
 
     public static String JWT_SECRET;
 
